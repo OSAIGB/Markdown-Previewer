@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import { marked } from 'marked';
+import Preview from './Preview';
+import Editor from './Editor';
 
 function App() {
   
@@ -16,16 +18,15 @@ useEffect(() => {
   setPreview(convertText)
 }, [text])
 
-  return (
-    <div className="App">
-      <header className="App-header">
-       <textarea id='editor' onChange={handleChange}>
-        {text}
-       </textarea>
-       <div id="preview" dangerouslySetInnerHTML={{ __html: preview }}></div>
-      </header>
-    </div>
-  );
+return ( 
+  <div className="App">
+    <header className="App-header">
+      <Editor text={text} handleChange={handleChange} />
+      <Preview preview={preview} />
+    </header>
+  </div>
+);
+
 }
 
 export default App;
