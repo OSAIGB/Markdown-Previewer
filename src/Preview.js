@@ -1,12 +1,11 @@
 import './App.css'
 
-function Preview({preview}){
+function Preview({preview, times, search}){
     return (
      <div id='preview-wrap'>
-<div id='preview-header'>
-Preview
-</div>
-    
+<div id='preview-header' >
+    <div >Preview</div>
+ <div className='times-search'><span className='times'>{times}</span> {search}</div></div>
         <div id="preview" dangerouslySetInnerHTML={{ __html: preview }}></div>
        </div>);
     }
