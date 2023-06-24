@@ -5,8 +5,10 @@ function Preview({preview, times, search}){
      <div id='preview-wrap'>
 <div id='preview-header' >
     <div >Preview</div>
- <div className='times-search'><span className='times'>{times}</span> {search}</div></div>
-        <div id="preview" dangerouslySetInnerHTML={{ __html: preview }}></div>
+ <div className='times-search'>{search}</div></div>
+        <div id="preview" dangerouslySetInnerHTML={{ __html: preview }}>
+            
+        </div>
        </div>);
     }
 

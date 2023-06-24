@@ -2,6 +2,8 @@ import './App.css'
 
 
 function Editor({text, handleChange, times, search, isClosed}){
+
+
     return(
         <div className='editor-wrap'>
       <div className='editor-header'>
@@ -10,7 +12,7 @@ function Editor({text, handleChange, times, search, isClosed}){
           <span className='times'>{times}</span> {search}
           </div></div>
 
-      <textarea id='editor' onChange={handleChange} className={`editor ${isClosed ? 'closed' : ''}`}>
+      <textarea autoFocus id='editor' onChange={handleChange} className={`editor ${isClosed ? 'closed' : ''}`}>
         {text}
       </textarea> 
     </div>
